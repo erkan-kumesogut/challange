@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the marquee render element.
+ *
+ * Available variables:
+ * 
+ * - content: The text to display within the marquee tag.
+ *
+ */
+#}
+
+{% for row in content %}
+
+	<div class="rows" id="task-{{row.id}}">
+
+		{{row.edit}}
+		{{row.delete}}
+	</div>
+
+
+{% endfor %}

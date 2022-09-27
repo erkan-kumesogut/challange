@@ -1,0 +1,25 @@
+
+todolist.toDoListController:
+  path: 'todo'
+  defaults:
+    _controller: '\Drupal\todolist\Controller\toDoListController::displayTasks'
+    _title: 'To Do List'
+  requirements:
+    _permission: 'access content'
+
+
+todolist.delete_task:
+  path: '/todo/delete/{id}'
+  defaults:
+    _controller: '\Drupal\todolist\Controller\toDoListController::deleteTask'
+    _title: 'Delete task'
+  requirements:
+    _permission: 'access content'
+
+todolist.edit_task:
+  path: '/todo/edit/{id}'
+  defaults:
+    _controller: '\Drupal\todolist\Controller\toDoListController::editTask'
+    _title: 'Delete task'
+  requirements:
+    _permission: 'access content'

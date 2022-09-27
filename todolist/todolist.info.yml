@@ -1,0 +1,5 @@
+name: 'ToDo List'
+type: module
+core_version_requirement: ^9
+description: 'Allows users to create a to do list'
+package: 'ToDo List'

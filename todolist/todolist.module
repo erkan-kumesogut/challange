@@ -1,0 +1,29 @@
+<?php
+use Drupal\Core\Url;
+use Drupal\Core\Link;
+
+
+
+
+function get_todolist_form() {
+	
+	$render_array = \Drupal::formBuilder()->getForm('Drupal\todolist\Form\toDoList_form');
+	
+	return $render_array;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function todolist_theme() {
+
+    return [
+      'todolist_edit_theme' => [
+        'variables' => [
+          'content' => [],
+        
+        ],
+      ],
+    ];
+  }
+

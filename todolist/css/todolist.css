@@ -1,0 +1,70 @@
+#todolist-form,.result_area{
+    max-width: 600px;
+    
+}
+.form-div-edit{
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    width: 80%;
+}
+
+#form-div-edit  + a {
+    display: none;
+}
+.rows {
+    display:flex;
+    width:100%;}
+.rows a.edit-link {
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    width: 80%;
+    text-decoration: none;
+    font-size: 20px;
+}
+.rows a.delete-link{
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    width: 100px;
+    height: 20px;
+    text-decoration: none;
+    border: 5px solid red;
+    background: red;
+    border-radius: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    
+}
+
+.f-buttons{
+    display: inline-block;
+    width: auto;
+    padding-left: 5%;
+}
+
+.f-buttons input{
+    display: inline-block;
+    margin: 10px;
+
+    width: 100%;
+
+    text-decoration: none;
+   
+    border-radius: 50px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.update-status {
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+}
+
+.update-task {
+    display: inline-block;
+    width: 90%;
+}

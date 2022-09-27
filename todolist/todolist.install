@@ -1,0 +1,68 @@
+<?php
+
+/**
+ * 
+ * @file
+ * 
+ * 
+ */
+
+
+// https://api.drupal.org/api/drupal/core!lib!Drupal!Core!Database!database.api.php/group/schemaapi/9.3.x
+
+
+function todolist_schema()
+{
+
+    $schema['todolist'] = [
+        'description' => 'Stores toDo list tasks',
+        'fields' => [
+            'id' => [
+                'description' => 'Record pk',
+                'type' => 'serial',
+                'size' => 'small',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+            ],
+            'uid' => [
+                'description' => 'stores uid of the user',
+                'type' => 'int',
+                'not null' => TRUE,
+                'default' => 0,
+            ],
+            'task' => [
+                'description' => 'Stores tasks',
+                'type' => 'varchar',
+                'length' => 64,
+                'not null' => FALSE,
+                'default' => '',
+            ],
+            'status' => [
+                'description' => 'Status of the task',
+                'type' => 'int',
+                'size' => 'tiny',
+                'not null' => TRUE,
+                'default' => 1,
+            ],
+            'created' => [
+                'description' => 'Timestamp of creation date',
+                'type' => 'int',
+                'not null' => TRUE,
+                'default' => 0,
+            ],
+            'updated' => [
+                'description' => 'Timestamp of last update date',
+                'type' => 'int',
+                'not null' => TRUE,
+                'default' => 0,
+            ],
+        ],
+        'primary key' => ['id'],
+        'indexes' => [
+            'node_user' => ['uid'],
+
+        ],
+    ];
+
+    return $schema;
+}
